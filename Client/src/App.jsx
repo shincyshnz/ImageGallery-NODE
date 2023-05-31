@@ -15,13 +15,17 @@ function App() {
   // const [imagePreview, setImagePreview] = useState([]);
 
   const fetchImages = async () => {
-    const response = await axios(API_URL);
-    setGalleryImages(response.data);
+    try {
+      const response = await axios(API_URL);
+      setGalleryImages(response.data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
     fetchImages();
-  }, [galleryImages]);
+  }, []);
 
   // const handleImage = (event) => {
   //   setImages(event.target.files);
@@ -41,6 +45,7 @@ function App() {
       selectedFile.push(image.name);
       formData.append("upload-files", image);
     });
+    formData.append("auth", "true");
 
     try {
       const response = await axios(`${API_URL}/upload`, {
