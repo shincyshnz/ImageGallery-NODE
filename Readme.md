@@ -28,9 +28,9 @@ Inside Folder Server
 ```
 npm init
 npm install nodemon -D
-npm install express
-npm install cors
-npm install multer
+npm i express
+npm i cors
+npm i multer
 ```
 
 - Install NodeJs
