@@ -4,6 +4,7 @@ const app = express();
 
 const ImageGalleryRoute = require('./routes/imageGallery');
 const { userInfo } = require("./middlewares/userInfo");
+const errorHandle = require("./middlewares/errorHandle");
 
 app.use(cors());
 app.use(express.json());
@@ -30,6 +31,8 @@ app.use(express.static("public"));
 app.use(userInfo);
 
 app.use("/", ImageGalleryRoute);
+
+app.use(errorHandle);
 
 app.use("*", (req, res) => {
     res.status(404).json({
