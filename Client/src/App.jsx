@@ -64,7 +64,11 @@ function App() {
       if (response.status === 200) {
         setProgress(0);
         setSelectedFile([]);
-        setGalleryImages((prev) => [...galleryImages, [...response.data]]);
+        console.log(galleryImages);
+        console.log(response.data);
+
+        setGalleryImages((prev) => [...galleryImages, ...response.data]);
+        console.log(galleryImages);
       }
     } catch (err) {
       console.log(err);
