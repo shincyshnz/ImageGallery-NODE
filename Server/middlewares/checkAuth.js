@@ -5,7 +5,7 @@ const checkAuth = (req, res, next) => {
             message: "un-authorized"
         });
     }
-    console.log("----------Inside Specific middleware : CheckAuth--------");
+    console.log("Inside Specific middleware : CheckAuth");
     next();
 }
 

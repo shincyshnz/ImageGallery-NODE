@@ -1,13 +1,13 @@
 # Image Gallery
 
-An Image Gallery built with React,NodeJs and Multer.
+An Image Gallery built with React,NodeJs and Multer. At the server side used the concept of middleware nad express routers. The express.Router() function is used to create a new router object. This function is used when you want to create a new router object in your program to handle requests. In this project both GET and POST are handled inside the 'routes/imageGallery.js'. The User-Info is logged using application specific middleware.
 
 ## Technologies Used
 
 - React
 - NodeJs- Multer
 - Express
-- Middleware - cors
+- Middleware - cors (Application Specific middleware)
 
 ## Installation Guide
 
@@ -52,4 +52,4 @@ npm i multer
 
 #### Note:Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files.
 
-![alt text](./ProjectImage.png "Logo Title Text 1")
+![alt text](./ProjectImage.png "Image Gallery Front End")
