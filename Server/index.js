@@ -10,23 +10,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-
-// const userData = [];
-
-
-//Application Level middleware
-// app.use((req, res, next) => {
-//     const newData = {
-//         "url": req.url,
-//         "method": req.method
-//     };
-//     userData.push(newData);
-//     console.log(userData);
-//     console.log("User Data inserted");
-//     console.log("Inside Application Level middleware");
-//     next();
-// });
-
 //Application Level middleware
 app.use(userInfo);
 
