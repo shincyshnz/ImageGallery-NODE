@@ -21,8 +21,7 @@ router.get("/", (req, res) => {
     // read images folder
     fs.readdir("public/images", (err, files) => {
         if (err) {
-            res.status(400).json(err);
-            return;
+            throw err;
         };
         res.status(200).json(files);
     })

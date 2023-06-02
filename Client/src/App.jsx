@@ -4,7 +4,8 @@ import axios from "axios";
 import { ProgressBar } from "./components/ProgressBar/ProgressBar";
 import { Modal } from "./components/Modal/Modal";
 
-const API_URL = "http://localhost:3008";
+// const API_URL = "http://localhost:3008";
+const API_URL = "https://image-gallery-node-back-end.vercel.app/";
 
 function App() {
   const [galleryImages, setGalleryImages] = useState([]);
@@ -45,7 +46,8 @@ function App() {
       selectedFile.push(image.name);
       formData.append("upload-files", image);
     });
-    formData.append("auth", "true");
+    // Boolean values are send in formData afterJSON.stringify
+    formData.append("auth", JSON.stringify(true));
 
     try {
       const response = await axios(`${API_URL}/upload`, {

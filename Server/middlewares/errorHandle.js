@@ -1,5 +1,5 @@
 const errorHandle = (err, req, res, next) => {
-    const status = error.status || 500;
+    const status = err.status || 500;
     let message = err.message || "Something went wrong please try again!";
 
     if (status == 400) {
