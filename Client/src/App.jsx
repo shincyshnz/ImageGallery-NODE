@@ -114,10 +114,10 @@ function App() {
               return (
                 <img
                   key={index}
-                  src={`${API_URL}/public/images/${image}`}
+                  src={`${API_URL}/images/${image}`}
                   onClick={() => {
                     handleClick();
-                    setModalImagePath(`${API_URL}/public/images/${image}`);
+                    setModalImagePath(`${API_URL}/images/${image}`);
                   }}
                 />
               );
