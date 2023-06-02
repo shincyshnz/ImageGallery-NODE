@@ -5,7 +5,7 @@ import { ProgressBar } from "./components/ProgressBar/ProgressBar";
 import { Modal } from "./components/Modal/Modal";
 
 // const API_URL = "http://localhost:3008";
-const API_URL = "https://image-gallery-node-back-end.vercel.app/";
+const API_URL = "https://image-gallery-node-server.vercel.app/";
 
 function App() {
   const [galleryImages, setGalleryImages] = useState([]);
